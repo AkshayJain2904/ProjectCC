@@ -1,0 +1,25 @@
+package com.careerconsultancy.services.jobseeker;
+
+import com.careerconsultancy.entities.jobseeker.JobSeekerPersonalDetails;
+
+public class JobseekerPersonalDetailsServiceImpl implements JobseekerPersonalDetailsService {
+
+	@Override
+	public void insertPersonalDetails(JobSeekerPersonalDetails jobSeekerPersonalDetails) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void viewPersonalDetails(JobSeekerPersonalDetails jobSeekerPersonalDetails) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updatePersonalDetails(JobSeekerPersonalDetails jobSeekerPersonalDetails) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

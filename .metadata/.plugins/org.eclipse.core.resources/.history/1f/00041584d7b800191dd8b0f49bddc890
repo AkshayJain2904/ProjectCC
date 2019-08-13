@@ -1,0 +1,36 @@
+package com.careerconsultancy.entities.jobseeker;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+@Component
+@Entity
+public class JobSeeker {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int jsId;
+	
+	@Autowired 
+	@OneToOne
+	private JobSeekerPersonalDetails jobSeekerPersonalDetails;
+	
+	@Autowired
+	@OneToOne
+	private JobSeekerEducationalDetails jobSeekerEducationalDetails;
+	
+	@Autowired
+	@OneToOne
+	private JobSeekerAddress jobSeekerAddress;
+	
+	@Autowired
+	@OneToOne
+	private JobSeekerProffesionalDetails jobSeekerProffesionalDetails;
+	
+
+
+}

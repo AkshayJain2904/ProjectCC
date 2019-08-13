@@ -1,0 +1,58 @@
+package com.careerconsultancy.services.jobseeker;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.careerconsultancy.entites.logincredential.LoginCredential;
+import com.careerconsultancy.entities.jobseeker.JobSeekerPersonalDetails;
+import com.careerconsultancy.jobseeker.dao.JobSeekerPersonalDetailsDao;
+import com.careerconsultancy.service.logincredential.LoginCredentialService;
+
+@Service
+@Transactional
+public class JobseekerPersonalDetailsServiceImpl implements JobseekerPersonalDetailsService {
+
+	@Autowired
+	private JobSeekerPersonalDetailsDao jobSeekerPersonalDetailsDao;
+	
+	@Autowired
+	private LoginCredentialService loginCredentialService;
+	
+	@Override
+	public void insertPersonalDetails(JobSeekerPersonalDetails jobSeekerPersonalDetails) {
+		String role="Jobseeker";
+		LoginCredential loginCredential=new LoginCredential();
+		loginCredential.setEmailId(jobSeekerPersonalDetails.getJsemail());
+		loginCredential.setPassword(jobSeekerPersonalDetails.getjSpassword());
+		loginCredential.setRole(role);
+		loginCredentialService.insertDetails(loginCredential);
+		jobSeekerPersonalDetailsDao.insert(jobSeekerPersonalDetails);
+	}
+
+	@Override
+	public List<JobSeekerPersonalDetails> viewPersonalDetails() {
+		return jobSeekerPersonalDetailsDao.getAll();
+	}
+
+	@Override
+	public void updatePersonalDetails(JobSeekerPersonalDetails jobSeekerPersonalDetails) {
+		LoginCredential loginCredential=new LoginCredential();
+		loginCredential.setEmailId(jobSeekerPersonalDetails.getJsemail());
+		loginCredential.setPassword(jobSeekerPersonalDetails.getjSpassword());
+		loginCredentialService.updateDetails(loginCredential);
+		jobSeekerPersonalDetailsDao.update(jobSeekerPersonalDetails);
+	}
+
+	@Override
+	public void deletePersonalDetails(JobSeekerPersonalDetails jobSeekerPersonalDetails) {
+		LoginCredential loginCredential=new LoginCredential();
+		loginCredential.setEmailId(jobSeekerPersonalDetails.getJsemail());
+		loginCredential.setPassword(jobSeekerPersonalDetails.getjSpassword());
+		loginCredentialService.deleteDetails(loginCredential);
+		jobSeekerPersonalDetailsDao.delete(jobSeekerPersonalDetails);
+	}
+
+}

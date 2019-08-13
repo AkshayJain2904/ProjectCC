@@ -1,0 +1,30 @@
+package com.careerconsultancy.service.web.employee;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.careerconsultancy.entities.employee.EmployeeDetails;
+import com.careerconsultancy.service.employee.EmployeeCredentialService;
+
+@RestController
+@RequestMapping("/employeecredential")
+public class EmployeeCredentialServiceWeb {
+
+	@Autowired
+	private EmployeeCredentialService employeeCredentialService;
+	
+	@PostMapping
+	public String createEmployee(EmployeeDetails employeeDetails) {
+		employeeCredentialService.createEmployee(employeeDetails);
+		return "Employee record inserted";
+	}
+	
+	@DeleteMapping
+	public void deleteEmployee(EmployeeDetails employeeDetails) {
+		employeeCredentialService.deleteEmployee(employeeDetails);
+		
+	}
+}

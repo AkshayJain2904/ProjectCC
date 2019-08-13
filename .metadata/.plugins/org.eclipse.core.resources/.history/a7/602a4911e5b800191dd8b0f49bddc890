@@ -1,0 +1,37 @@
+package com.careerconsultancy.services.web.jobseeker;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.careerconsultancy.entities.jobseeker.JobSeekerPersonalDetails;
+import com.careerconsultancy.services.jobseeker.JobseekerPersonalDetailsService;
+
+@RestController
+@RequestMapping("/jobseekerpersonaldetails")
+public class JobseekerPersonalDetailsWeb {
+	
+	@Autowired
+	private JobseekerPersonalDetailsService jobseekerPersonalDetailsService;
+
+	@PostMapping
+	public String insertPersonalDetails(JobSeekerPersonalDetails jobSeekerPersonalDetails) {
+		jobseekerPersonalDetailsService.insertPersonalDetails(jobSeekerPersonalDetails);
+		return "PersonalDetails inserted";
+	}
+	
+	@PutMapping
+	public String updatePersonalDetails(JobSeekerPersonalDetails jobSeekerPersonalDetails) {
+		jobseekerPersonalDetailsService.updatePersonalDetails(jobSeekerPersonalDetails);
+		return "PersonalDetails updated";
+	}
+	
+	@GetMapping 
+	public List<JobSeekerPersonalDetails> viewPersonalDetails() {
+		return jobseekerPersonalDetailsService.viewPersonalDetails();
+	}
+}

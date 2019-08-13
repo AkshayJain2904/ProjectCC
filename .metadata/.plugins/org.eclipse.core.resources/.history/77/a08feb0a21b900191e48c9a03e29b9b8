@@ -1,0 +1,73 @@
+package com.careerconsultancy.service.web.employee;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.careerconsultancy.entities.employee.EmployeeDetails;
+import com.careerconsultancy.entities.job.JobInfo;
+import com.careerconsultancy.service.employee.EmployeeService;
+import com.careerconsultancy.service.job.JobInfoService;
+
+@RestController
+@RequestMapping("/employee")
+public class EmployeeServiceWeb {
+
+	@Autowired
+	private EmployeeService employeeService;
+	
+	@Autowired
+	private JobInfoService jobInfoService;
+	
+	@PostMapping
+	public String createEmployee(EmployeeDetails employeeDetails) {
+		employeeService.createEmployee(employeeDetails);
+		return "Employee record inserted";
+	}
+	
+	@DeleteMapping
+	public String deleteEmployee(EmployeeDetails employeeDetails) {
+		employeeService.deleteEmployee(employeeDetails);
+		return "Employee record deleted";	
+	}
+	
+	@PutMapping
+	public String updateEmployeeDetails(EmployeeDetails employeeDetails) {
+		employeeService.updateEmployee(employeeDetails);
+		return "employee details updated";
+	}
+	
+	@GetMapping
+	public List<EmployeeDetails> viewDetails() {
+		return employeeService.viewAllEmployee();
+	}
+	
+	@PostMapping("/postjob")
+	public String postNewJob(JobInfo jobInfo) {
+		jobInfoService.postJob(jobInfo);
+		return "new job posted";
+	}
+	
+	@DeleteMapping("/deletejob")
+	public String deleteJob(JobInfo jobInfo) {
+		jobInfoService.deleteJob(jobInfo);
+		return "job deleted";	
+	}
+	
+	@PutMapping("/updatejob")
+	public String updateJob(JobInfo jobInfo) {
+		jobInfoService.editJob(jobInfo);
+		return "job details edited";
+	}
+	
+	@GetMapping("/viewjobs")
+	public List<JobInfo> viewAllJobs() {
+		return jobInfoService.viewAllJob();
+	}
+}

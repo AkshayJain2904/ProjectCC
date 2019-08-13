@@ -1,0 +1,5 @@
+package com.careerconsultancy.services.jobseeker;
+
+public interface JobseekerProffesionalDetailsService {
+
+}

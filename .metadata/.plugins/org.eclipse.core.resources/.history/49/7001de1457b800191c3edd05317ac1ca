@@ -1,0 +1,27 @@
+package com.careerconsultancy.services.jobseeker;
+
+import java.util.List;
+
+import com.careerconsultancy.entities.jobseeker.JobSeekerAddress;
+
+public class JobseekerAddressServiceImpl implements JobseekerAddressService {
+
+	@Override
+	public void insertAddress(JobSeekerAddress jobSeekerAddress) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updateAddress(JobSeekerAddress jobSeekerAddress) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<JobSeekerAddress> viewAddresses() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

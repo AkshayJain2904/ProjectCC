@@ -1,0 +1,10 @@
+package com.careerconsultancy.service.logincredential;
+
+import com.careerconsultancy.entites.logincredential.LoginCredential;
+
+public interface LoginCredentialService {
+	void verifyUser(LoginCredential loginCredential);
+	void logIn(LoginCredential loginCredential);
+	void logOut(LoginCredential loginCredential);
+	LoginCredential findUser(String loginId);
+}

@@ -1,0 +1,27 @@
+package com.careerconsultancy.services.jobseeker;
+
+import java.util.List;
+
+import com.careerconsultancy.entities.jobseeker.JobSeekerProffesionalDetails;
+
+public class JobseekerProffesionalDetailsServiceImpl implements JobseekerProffesionalDetailsService {
+
+	@Override
+	public void insert(JobSeekerProffesionalDetails jobSeekerProffesionalDetails) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void update(JobSeekerProffesionalDetails jobSeekerProffesionalDetails) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<JobSeekerProffesionalDetails> viewAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

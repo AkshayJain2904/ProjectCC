@@ -1,0 +1,25 @@
+package com.careerconsultancy.service.employee;
+
+import com.careerconsultancy.entities.employee.EmployeeDetails;
+
+public class EmployeeCredentialServiceImpl implements EmployeeCredentialService {
+
+	@Override
+	public void createEmployee(EmployeeDetails employeeDetails) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deleteEmployee(EmployeeDetails employeeDetails) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void viewAllEmployee(EmployeeDetails employeeDetails) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

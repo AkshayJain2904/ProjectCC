@@ -1,0 +1,33 @@
+package com.careerconsultancy.service.job;
+
+import java.util.List;
+
+import com.careerconsultancy.entities.job.JobInfo;
+
+public class JobInfoServiceImpl implements JobInfoService {
+
+	@Override
+	public void postJob(JobInfo jobInfo) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<JobInfo> viewAllJob() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void editJob(JobInfo jobInfo) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deleteJob(JobInfo jobInfo) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

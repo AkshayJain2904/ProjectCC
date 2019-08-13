@@ -1,0 +1,56 @@
+package com.careerconsultancy;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CareerCounsultancyApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CareerCounsultancyApplication.class, args);
+		System.out.println("Hello India");
+	}
+	
+	@Autowired
+	@Bean(name = "dataSource")
+	public DataSource  getDataSource() {
+		DriverManagerDataSource driverManagerDataSource=new DriverManagerDataSource();
+		driverManagerDataSource.setDriverClassName(environment.getProperty("spring.datasource.driver-class-name"));
+		driverManagerDataSource.setUrl(environment.getProperty("spring.datasource.url"));
+		driverManagerDataSource.setUsername(environment.getProperty("spring.datasource.username"));
+		driverManagerDataSource.setPassword(environment.getProperty("spring.datasource.password"));
+		System.out.println("##getdatasource"+driverManagerDataSource);
+		return driverManagerDataSource;
+	}
+	@Autowired
+	@Bean(name = "sessionFactory")
+	public SessionFactory getSessionFactory(DataSource dataSource) throws IOException
+	{
+		Properties properties=new Properties();
+		properties.put("hibernatedialect", environment.getProperty("spring.jpa.properties.hibernate.dialect"));
+		properties.put("hibernate.show_sql", environment.getProperty("spring.jpa.show-sql"));
+		
+		LocalSessionFactoryBean localSessionFactoryBean=new LocalSessionFactoryBean();
+		localSessionFactoryBean.setPackagesToScan(new String[] {"com.zensar.entites"});
+		localSessionFactoryBean.setDataSource(dataSource);
+		localSessionFactoryBean.setHibernateProperties(properties);
+		localSessionFactoryBean.afterPropertiesSet();
+		SessionFactory sessionFactory=localSessionFactoryBean.getObject();
+		System.out.println("## get session factory"+sessionFactory);
+		return sessionFactory;
+	}
+	@Autowired
+	@Bean(name = "hibernateTemplate")
+	public HibernateTemplate getHibernateTemplate(SessionFactory sessionFactory) {
+		HibernateTemplate hibernateTemplate=new HibernateTemplate(sessionFactory);
+		return hibernateTemplate;
+	}
+	
+	@Autowired
+	@Bean(name = "transacationManager")
+	public HibernateTransactionManager getHibernateTransactionManager(SessionFactory sessionFactory) {
+		HibernateTransactionManager hibernateTransactionManager=new HibernateTransactionManager(sessionFactory);
+		return hibernateTransactionManager;
+	}
+	
+}

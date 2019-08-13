@@ -1,0 +1,30 @@
+1564982483011	Rename package 'com.careerconsultanc'
+1564982501291	Rename package 'com.careerconsultanc.logincredential'
+1564982521803	Rename package 'com.careerconsultanc.jobseeker'
+1564982543184	Rename package 'com.careerconsultancy.logincredential'
+1564982554363	Rename package 'com.careerconsultanc.logincredential'
+1564982572958	Rename package 'com.careerconsultanc.job'
+1564982587645	Rename package 'com.careerconsultanc.employee'
+1564984139849	Delete element
+1564984180894	Rename package 'com.careerconsultancy.dao'
+1564984528869	Delete element
+1564984600786	Rename package 'com.careerconsultancy.employeedetails.dao'
+1564984664332	Rename package 'com.careerconsultancy.dao'
+1564984732640	Rename package 'com.careerconsultancy.jobseeker'
+1564984762298	Rename package 'com.careerconsultancy.entities.jobseeker.dao'
+1564984783049	Rename package 'com.careerconsultancy.job'
+1564984796345	Rename package 'com.careerconsultancy.logincredential'
+1564984822437	Rename package 'com.careerconsultancy.employee'
+1564984834313	Rename package 'com.careerconsultancy.entities.employee.dao'
+1564987003265	Delete element
+1564987033281	Rename package 'com.careerconsultancy.dao'
+1564987294668	Rename package 'com.careerconsultancy.dao'
+1565064330099	Rename type 'LoginCredentialServices'
+1565100676403	Delete element
+1565100713665	Rename type 'EmployeeService'
+1565100740788	Delete element
+1565101703264	Rename type 'JobseekerAddressDetailsService'
+1565102745838	Delete element
+1565186920461	Rename type 'EmployeeCredentialServiceWeb'
+1565187420970	Rename type 'EmployeeCredentialService'
+1565187435446	Rename type 'EmployeeCredentialServiceImpl'

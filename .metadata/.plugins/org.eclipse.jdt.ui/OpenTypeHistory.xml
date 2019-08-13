@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=CareerCounsultancy/src\/main\/java&lt;com.careerconsultancy.service.logincredential{LoginCredentialService.java[LoginCredentialService" modifiers="513" timestamp="1565189988978"/>
+<typeInfo handle="=CareerCounsultancy/C:\/Program Files\/Java\/jdk1.8.0_212\/jre\/lib\/rt.jar&lt;javax.xml.ws.handler(LogicalMessageContext.class[LogicalMessageContext" modifiers="1537" timestamp="1562993800613"/>
+<typeInfo handle="=CareerCounsultancy/src\/main\/java&lt;com.careerconsultancy.services.jobseeker{JobseekerAddressService.java[JobseekerAddressService" modifiers="513" timestamp="1565101851032"/>
+<typeInfo handle="=CareerCounsultancy/src\/main\/java&lt;com.careerconsultancy.services.jobseeker{JobseekerPersonalDetailsService.java[JobseekerPersonalDetailsService" modifiers="513" timestamp="1565614970466"/>
+<typeInfo handle="=CareerCounsultancy/src\/main\/java&lt;com.careerconsultancy.jobseeker.dao{JobSeekerPersonalDetailsDao.java[JobSeekerPersonalDetailsDao" modifiers="513" timestamp="1564984762095"/>
+<typeInfo handle="=CareerCounsultancy/src\/main\/java&lt;com.careerconsultancy.services.jobseeker{JobseekerEducationalDetailsService.java[JobseekerEducationalDetailsService" modifiers="513" timestamp="1565176870357"/>
+<typeInfo handle="=CareerCounsultancy/src\/main\/java&lt;com.careerconsultancy.jobseeker.dao{JobSeekerEducationalDetailsDao.java[JobSeekerEducationalDetailsDao" modifiers="513" timestamp="1564984762267"/>
+<typeInfo handle="=CareerCounsultancy/src\/main\/java&lt;com.careerconsultancy.services.jobseeker{JobseekerProffesionalDetailsService.java[JobseekerProffesionalDetailsService" modifiers="513" timestamp="1565177185696"/>
+<typeInfo handle="=CareerCounsultancy/src\/main\/java&lt;com.careerconsultancy.services.jobseeker{JobseekerService.java[JobseekerService" modifiers="513" timestamp="1565614856688"/>
+<typeInfo handle="=CareerCounsultancy/src\/main\/java&lt;com.careerconsultancy.service.job{JobInfoService.java[JobInfoService" modifiers="513" timestamp="1565186723355"/>
+</typeInfoHistroy>

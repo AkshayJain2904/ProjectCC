@@ -1,0 +1,50 @@
+package com.careerconsultancy.service.logincredential;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.careerconsultancy.entites.logincredential.LoginCredential;
+import com.careerconsultancy.logincredential.dao.LoginCredentialDao;
+
+@Service
+@Transactional
+public class LoginCredentialServicesImpl implements LoginCredentialService {
+
+	@Autowired
+	private LoginCredentialDao loginCredentialDao;
+	
+	@Override
+	public void verifyUser(LoginCredential loginCredential) {
+		LoginCredential loginCredential2=new LoginCredential();
+		if(loginCredential2.getEmailId()==loginCredential.getEmailId() && loginCredential2.getPassword()==loginCredential.getPassword())
+		{
+			
+		}
+		else {
+		
+			
+			
+		}
+		
+	}
+
+	@Override
+	public void logIn(LoginCredential loginCredential) {
+		
+		
+	}
+
+	@Override
+	public void logOut(LoginCredential loginCredential) {
+		
+		
+	}
+
+	@Override
+	public void findUser(LoginCredential loginCredential) {
+		String emailId=loginCredential.getEmailId();
+		String password=loginCredential.getPassword();		
+	}
+
+}

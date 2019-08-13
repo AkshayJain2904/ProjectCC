@@ -1,0 +1,13 @@
+package com.careerconsultancy.service.logincredential;
+
+import com.careerconsultancy.entites.logincredential.LoginCredential;
+
+public class LoginCredentialServicesImpl implements LoginCredentialService {
+
+	@Override
+	public void verifyUser(LoginCredential loginCredential) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

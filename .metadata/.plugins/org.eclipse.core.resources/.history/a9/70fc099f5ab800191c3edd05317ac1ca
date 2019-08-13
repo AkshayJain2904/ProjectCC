@@ -1,0 +1,9 @@
+package com.careerconsultancy.services.jobseeker;
+
+import com.careerconsultancy.entities.jobseeker.JobSeekerPersonalDetails;
+
+public interface JobseekerPersonalDetailsService {
+	void insertPersonalDetails(JobSeekerPersonalDetails jobSeekerPersonalDetails);
+	void viewPersonalDetails(JobSeekerPersonalDetails jobSeekerPersonalDetails);
+	void updatePersonalDetails(JobSeekerPersonalDetails jobSeekerPersonalDetails);
+}

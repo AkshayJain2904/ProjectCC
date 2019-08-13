@@ -1,0 +1,6 @@
+package com.careerconsultancy.service.employee;
+
+public interface EmployeeService {
+	
+
+}

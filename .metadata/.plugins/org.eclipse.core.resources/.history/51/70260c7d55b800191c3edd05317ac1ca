@@ -1,0 +1,5 @@
+package com.careerconsultancy.service.web.employee;
+
+public class EmployeeCredentialServiceWeb {
+
+}

@@ -1,0 +1,34 @@
+package com.careerconsultancy.services.jobseeker;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.careerconsultancy.entities.jobseeker.JobSeekerPersonalDetails;
+import com.careerconsultancy.jobseeker.dao.JobSeekerPersonalDetailsDao;
+
+@Service
+@Transactional
+public class JobseekerPersonalDetailsServiceImpl implements JobseekerPersonalDetailsService {
+
+	@Autowired
+	private JobSeekerPersonalDetailsDao jobSeekerPersonalDetailsDao;
+	
+	@Override
+	public void insertPersonalDetails(JobSeekerPersonalDetails jobSeekerPersonalDetails) {
+		jobSeekerPersonalDetailsDao.insert(jobSeekerPersonalDetails);
+	}
+
+	@Override
+	public List<JobSeekerPersonalDetails> viewPersonalDetails(JobSeekerPersonalDetails jobSeekerPersonalDetails) {
+		return jobSeekerPersonalDetailsDao.getAll();
+	}
+
+	@Override
+	public void updatePersonalDetails(JobSeekerPersonalDetails jobSeekerPersonalDetails) {
+		jobSeekerPersonalDetailsDao.update(jobSeekerPersonalDetails);
+	}
+
+}

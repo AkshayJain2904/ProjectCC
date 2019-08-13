@@ -1,0 +1,35 @@
+package com.careerconsultancy.service.logincredential;
+
+import com.careerconsultancy.entites.logincredential.LoginCredential;
+import com.careerconsultancy.logincredential.dao.LoginCredentialDao;
+
+public class LoginCredentialServicesImpl implements LoginCredentialService {
+
+	private LoginCredentialDao loginCredentialDao;
+	
+	@Override
+	public void verifyUser(LoginCredential loginCredential) {
+		LoginCredential loginCredential2=new LoginCredential();
+		
+		
+	}
+
+	@Override
+	public void logIn(LoginCredential loginCredential) {
+		
+		
+	}
+
+	@Override
+	public void logOut(LoginCredential loginCredential) {
+		
+		
+	}
+
+	@Override
+	public LoginCredential findUser(int id) {
+		
+		return loginCredentialDao.getbyId(id);
+	}
+
+}
